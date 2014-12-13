@@ -41,20 +41,3 @@ Shape.prototype.adjustContext = function(canvasCtx) {
 Shape.prototype.renderShape = function(canvasCtx) {
     throw new Error('you must override the renderShape() method!');
 }; //Shape.renderShape()
-
-var ShapeProto = {
-    //just reuse the functions from Shape.prototype
-    render: Shape.prototype.render,
-    adjustContext: Shape.prototype.adjustContext,
-    renderShape: Shape.prototype.renderShape
-}; //ShapeProto
-
-function createShape(left, top, width, height, stylesMap) {
-    var shape = Object.create(ShapeProto);
-    shape.left = left;
-    shape.top = top;
-    shape.width = width;
-    shape.height = height;
-    shape.stylesMap = stylesMap;
-    return shape;
-} //createShape()

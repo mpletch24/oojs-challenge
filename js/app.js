@@ -6,17 +6,6 @@
 
 var _shapeTypes = {};
 
-/*
-    registerPrototypalShape()
-    registers a new shape subclass built in the prototypal style
-    parameters:
-        typeName [string] name of your new type (for the UI)
-        factoryFn [function] reference to the factory function that will create
-            new instances of your new shape suclass
-*/
-function registerPrototypalShape(typeName, factoryFn) {
-    _shapeTypes[typeName] = factoryFn;
-}
 
 /*
     registerClassicalShape
